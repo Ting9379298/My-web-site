@@ -1,0 +1,330 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-1: #dbf9ff;
+  --color-2: #ffd7ff;
+  --color-3: #ffed67;
+  --color-4: #5ab2ff;
+  --color-5: #fff9ec;
+
+  --footer-font: #2081b5f5;
+}
+
+.new-tegomin-regular {
+  font-family: "New Tegomin", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.single-day-regular {
+  font-family: "Single Day", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Single Day", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#cover h1 {
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  color: rgb(37, 40, 34);
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+#cover {
+  width: 100vw;
+  display: grid;
+  gap: 0;
+  /* grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr); */
+  grid-template-areas:
+    "big01 big01 squaS01 squaS02"
+    "big01 big01 squaS03 squaS04";
+  z-index: 200;
+}
+
+.big-squa {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo {
+  width: 220px;
+  filter: contrast(100%);
+  opacity: 95%;
+  transition-duration: 1s;
+}
+
+#logo:hover,
+.small-squa a:hover {
+  transform: rotate(10deg);
+}
+
+#cover .big-squa {
+  grid-area: big01;
+  background-color: var(--color-1);
+}
+
+#content .big-squa {
+  grid-area: big02;
+  background-color: var(--color-4);
+}
+
+.rectangle {
+  width: 50vw;
+  grid-area: rec;
+  overflow: hidden;
+}
+
+.rectangle img {
+  width: 50vw;
+}
+
+.small-squa {
+  width: 25vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drink-img {
+  max-width: 200px;
+}
+
+#cover div:nth-child(2) {
+  grid-area: squaS01;
+  background-color: var(--color-2);
+}
+
+#cover div:nth-child(3) {
+  grid-area: squaS02;
+  background-color: var(--color-3);
+}
+
+#cover div:nth-child(4) {
+  grid-area: squaS03;
+  background-color: var(--color-5);
+}
+
+#cover div:nth-child(5) {
+  grid-area: squaS04;
+  background-color: var(--color-4);
+}
+
+#content {
+  width: 100vw;
+  display: grid;
+  margin-bottom: 90vh;
+  grid-template-areas:
+    "squaS05 squaS06 big02 big02"
+    "rec rec big02 big02";
+  z-index: 200;
+}
+
+#content div:nth-child(1) {
+  grid-area: squaS05;
+  background-color: var(--color-5);
+}
+
+#content div:nth-child(2) {
+  grid-area: squaS06;
+  background-color: var(--color-3);
+}
+
+#content div:nth-child(3) {
+  grid-area: rec;
+}
+
+#full-img {
+  height: 100vh;
+  width: 100vw;
+
+  background-image: url(./assets/drinks-2.jpg);
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#full-img img {
+  width: 100%;
+}
+
+footer {
+  background-color: var(--color-5);
+  color: var(--footer-font);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  padding: 80px 100px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 130px 200px;
+  gap: 54px 108px;
+  align-content: end;
+}
+
+footer h1 {
+  margin: 0 390px 30px 0;
+  grid-column: 1/ -1;
+  grid-row: 1;
+  line-height: 36px;
+  font-weight: 500;
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 2.1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.small-squa a {
+  font-size: 1.9rem;
+}
+
+.info a,
+.small-squa a {
+  text-decoration: none;
+  color: var(--footer-font);
+  cursor: pointer;
+  transition-duration: 1s;
+}
+
+.info a:hover {
+  color: rgb(206, 43, 29);
+}
+
+.info p,
+.info a {
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 375px) and (max-width: 1024px) {
+  footer {
+    gap: 14px;
+  }
+
+  footer h1 {
+    font-size: 1.8rem;
+    margin: 0 100px 30px 0;
+  }
+
+  footer h2 {
+    font-size: 1.6rem;
+  }
+
+  #cover {
+    grid-template-areas:
+      "big01 big01"
+      "big01 big01"
+      "squaS01 squaS02"
+      "squaS03 squaS04";
+  }
+
+  #content {
+    grid-template-areas:
+      "squaS05 squaS06"
+      "rec rec"
+      "big02 big02"
+      "big02 big02";
+  }
+
+  .big-squa {
+    width: 100vw;
+  }
+
+  .small-squa {
+    width: 50vw;
+  }
+
+  .rectangle {
+    width: 100vw;
+  }
+
+  .rectangle img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .big-squa {
+    width: 100vw;
+  }
+
+  .small-squa {
+    width: 100vw;
+  }
+
+  .rectangle {
+    width: 100vw;
+  }
+
+  #cover {
+    grid-template-areas:
+      "big01"
+      "squaS01"
+      "squaS02"
+      "squaS03"
+      "squaS04";
+  }
+
+  #cover h1 {
+    font-size: 1.4rem;
+    top: 30px;
+    left: 40px;
+  }
+
+  #content {
+    grid-template-areas:
+      "squaS05"
+      "squaS06"
+      "rec"
+      "big02";
+
+    padding-bottom: 120vh;
+  }
+
+  .rectangle img {
+    width: 150%;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 16px 10px 16px;
+    height: 700px;
+  }
+
+  .info {
+    gap: 0;
+  }
+
+  footer h2 {
+    font-size: 1.4rem;
+  }
+}

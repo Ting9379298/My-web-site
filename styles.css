@@ -1,0 +1,163 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: var(--font-color);
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+:root {
+  --font-color: rgb(59, 76, 98);
+  --btn-color: rgb(224, 233, 240);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    rgb(221, 235, 244) 0%,
+    rgb(221, 235, 244) 45%,
+    rgb(178, 197, 186) 95%
+  );
+  overflow: hidden;
+}
+
+.cn_font {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#lang {
+  cursor: pointer;
+}
+
+#lang:hover {
+  color: brown;
+}
+
+nav {
+  /* border: 2px solid; */
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding: 18px 50px;
+}
+
+main {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 34px;
+}
+
+@media screen and (max: 375px) {
+  main {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  nav {
+    padding: 18px 20px;
+  }
+}
+
+#avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#avatar img {
+  width: 158px;
+  position: relative;
+  right: 16px;
+  filter: brightness(120%);
+}
+
+#content {
+  width: 356px;
+  height: 400px;
+  padding: 14px;
+  background-color: rgba(252, 252, 252, 0.8);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: -1px;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 62px;
+}
+
+.shadow {
+  box-shadow: 3px 3px var(--font-color);
+}
+
+.shadow2 {
+  box-shadow: rgba(80, 89, 97, 0.133) 9px 9px 25px -6px;
+}
+
+.btn {
+  cursor: pointer;
+  width: 186px;
+  height: 40px;
+  border: 0;
+  background-color: var(--btn-color);
+  border-radius: 30px;
+  font-size: 1.05rem;
+  transition-duration: 0.1s;
+}
+
+#links {
+  display: flex;
+  gap: 24px;
+  margin-top: 12px;
+}
+
+.link {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--btn-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.1s;
+}
+
+.link:hover,
+.btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px var(--font-color);
+}
+
+.link-img {
+  width: 30px;
+  height: 30px;
+  opacity: 75%;
+}

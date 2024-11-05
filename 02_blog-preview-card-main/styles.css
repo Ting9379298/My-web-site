@@ -1,0 +1,96 @@
+body {
+  background-color: hsl(47, 88%, 63%);
+}
+
+#container {
+  background-color: aliceblue;
+  margin: 200px auto auto auto;
+  border: 1.2px solid hsl(0, 0%, 7%);
+  border-radius: 25px;
+  width: 350px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 10px 10px hsl(0, 0%, 7%);
+}
+
+#cover-img {
+  width: 300px;
+  height: 185px;
+  margin-top: 26px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+svg {
+  width: 320px;
+  position: relative;
+  top: -10px;
+}
+
+#texts {
+  display: flex;
+  gap: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 25px 25px 5px 25px;
+}
+
+#tag {
+  height: 25px;
+  width: 90px;
+  background-color: hsl(47, 88%, 63%);
+  border-radius: 6px;
+  text-align: center;
+  padding-top: 5px;
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 800;
+}
+
+#date {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+#title {
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+#description {
+  font-size: 0.9em;
+  font-weight: 200;
+  line-height: 1.5;
+  color: hsl(0, 0%, 42%);
+}
+
+#name-container {
+  width: 200px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+#name-text {
+  font-size: 0.8em;
+  font-weight: 800;
+}
+
+#avatar {
+  width: 30px;
+}
+
+#date,
+#title,
+#description,
+#name-container {
+  margin: 15px 0 0 0;
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}

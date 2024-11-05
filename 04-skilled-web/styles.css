@@ -1,0 +1,265 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+:root {
+  --pink: #f1457f;
+  --orange: #fa7136;
+  --purple: #6d51eb;
+  --light-purple: #ca24b1;
+  --dark-blue: rgb(20, 26, 52);
+  --gray: rgba(129, 129, 129, 0.909);
+  --background-color: rgb(251, 251, 251);
+  --shadow: rgba(157, 158, 225, 0.17);
+  --side-padding: 150px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  color: white;
+}
+
+header {
+  padding: 30px var(--side-padding);
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+
+header p,
+footer p {
+  font-size: 2.1em;
+  font-weight: 700;
+}
+
+header p {
+  color: var(--dark-blue);
+}
+
+#btn-header,
+#btn-footer {
+  border-radius: 50px;
+  width: 170px;
+  height: 58px;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+#btn-header {
+  background-color: var(--dark-blue);
+}
+
+main {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+#cover {
+  display: flex;
+  justify-content: space-between;
+  height: 84vh;
+  width: 100vw;
+  padding: 40px var(--side-padding) 200px var(--side-padding);
+}
+
+#cover-text,
+#cover-image {
+  width: 35vw;
+  height: 76vh;
+}
+
+#cover-text {
+  padding: 58px 50px 32px 0;
+}
+
+h1 {
+  font-size: 3.2em;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+#cover-text p {
+  margin: 50px 0;
+  font-size: 1.1em;
+  color: var(--gray);
+}
+
+#cover-text button {
+  background: linear-gradient(var(--orange) 0%, var(--pink) 60%);
+  box-shadow: 0.4px 0.4px 1px #93305eee;
+  border-radius: 50px;
+  margin-top: 10px;
+  width: 170px;
+  height: 68px;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+#round-squa {
+  background: linear-gradient(var(--orange) 0%, var(--pink) 70%);
+  width: 310px;
+  height: 560px;
+  border-radius: 200px;
+  overflow: hidden;
+  position: relative;
+  left: 100px;
+  top: -15px;
+}
+
+#round-squa img {
+  width: 350px;
+  position: relative;
+  left: -20px;
+  top: 65px;
+}
+
+#squa {
+  background: linear-gradient(-105deg, var(--purple), var(--light-purple));
+  width: 320px;
+  height: 410px;
+  position: relative;
+  bottom: 615px;
+  left: 340px;
+  transform: skew(0, -46deg);
+  z-index: -1;
+}
+
+#members {
+  width: 162px;
+  height: 114px;
+  position: relative;
+  bottom: 830px;
+  left: 380px;
+}
+
+#course-hours {
+  width: 190px;
+  height: 114px;
+  position: relative;
+  bottom: 680px;
+}
+
+.num {
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--dark-blue);
+  padding: 3px 0 0 25px;
+}
+
+.title-gray {
+  font-size: 1em;
+  font-weight: 500;
+  padding: 20px 0 0 25px;
+  color: var(--gray);
+}
+
+.shadow {
+  border-radius: 16px;
+  background-color: white;
+  box-shadow: var(--shadow) -15px 20px 45px;
+}
+
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px 28px;
+  padding: 140px var(--side-padding) 140px var(--side-padding);
+  background: linear-gradient(var(--background-color), var(--shadow));
+}
+
+#content-title {
+  background: linear-gradient(var(--orange) 0%, var(--pink) 60%);
+}
+
+h2 {
+  color: white;
+  font-size: 2em;
+  font-weight: 600;
+  margin: 40px auto auto 14px;
+}
+
+.cards {
+  width: 350px;
+  height: 330px;
+  padding: 26px;
+  display: grid;
+  grid-template-rows: 10% 25% 50% 15%;
+  align-items: top;
+}
+
+.circle {
+  background: linear-gradient(var(--orange), var(--pink));
+  box-shadow: 0.4px 0.4px 1px #93305eee;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: relative;
+  top: -50px;
+}
+
+.icon {
+  width: 24px;
+  position: relative;
+  left: 18px;
+  top: 18px;
+}
+.small-title {
+  font-size: 1.5em;
+  color: var(--dark-blue);
+}
+
+.text {
+  font-size: 1.1em;
+  color: var(--gray);
+}
+
+.get-started {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--pink);
+}
+
+footer {
+  padding: 40px var(--side-padding);
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-blue);
+  color: white;
+}
+
+#btn-footer {
+  background: linear-gradient(var(--purple) 0%, var(--light-purple)) 70%;
+}
+
+/* @media screen and (max-width: 1000px) {
+  :root {
+    --side-padding: 30px;
+  }
+
+  body {
+    font-size: 80%;
+  }
+
+  #cover-text {
+    flex-basis: 500px;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+} */

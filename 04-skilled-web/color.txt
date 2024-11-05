@@ -1,0 +1,5 @@
+gray text: rgba(129, 129, 129, 0.826);
+
+background: linear-gradient(#fa7136 0%, #e34d7f 70%); orange
+
+background-color: rgb(20, 26, 52); dark blue

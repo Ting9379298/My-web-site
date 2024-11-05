@@ -1,0 +1,297 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #f7f4f0;
+  --font-and-line-color: #4d7083;
+  --shadow-color: #ab869634;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-and-line-color);
+  font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+header {
+  height: 50px;
+  padding: 38px 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-and-line-color);
+}
+
+#my-name {
+  grid-column: 3;
+  font-weight: 700;
+}
+
+#back-btn {
+  width: 128px;
+  height: 34px;
+  padding: 2px 8px;
+  border-radius: 30px;
+
+  position: relative;
+  left: 38px;
+}
+
+.btn {
+  border: 1.6px solid var(--font-and-line-color);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: all 0.1s ease-in;
+  box-shadow: 3px 3px var(--font-and-line-color);
+}
+
+#back-btn:hover {
+  transform: translateX(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0;
+}
+
+.line {
+  border-top: 1px solid var(--font-and-line-color);
+  border-bottom: 1px solid var(--font-and-line-color);
+  margin: 36px 120px 10px 120px;
+  height: 6px;
+}
+
+main {
+  margin: 40px 120px;
+}
+
+#title {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: last baseline;
+  gap: 30px;
+  margin-bottom: 38px;
+}
+
+h1 {
+  font-size: 10rem;
+  font-family: "Cormorant SC", serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -12px;
+}
+
+#title p {
+  font-size: 1.5rem;
+}
+
+#gallery {
+  /* border: 1px solid black; */
+  display: grid;
+  grid-template-rows: repeat(7 1fr);
+  grid-template-columns: 1fr 1fr;
+  gap: 120px 40px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.image-style {
+  width: 564px;
+  height: 338px;
+  /* border-radius: 18px; */
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.image-style:hover {
+  opacity: 0.82;
+  transform: scale(1.005);
+}
+
+#top-btn {
+  width: 60px;
+  height: 50px;
+  border-radius: 30px;
+  font-weight: 600;
+  padding: 10px 0 0 0;
+
+  position: relative;
+  top: 398px;
+  left: -312px;
+}
+
+#top-btn:hover {
+  transform: translateX(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0;
+}
+
+footer {
+  height: 56px;
+  padding: 24px 0;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+@keyframes zoom {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.image-modal,
+.modal-content {
+  animation-name: zoom;
+  animation-duration: 0.15s;
+  animation-timing-function: ease-in;
+}
+
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(230, 226, 224, 0.663);
+  backdrop-filter: blur(8px);
+}
+
+.close {
+  position: absolute;
+  left: 83%;
+  top: 12.4%;
+  height: 58px;
+  width: 58px;
+  border-radius: 34%;
+  cursor: pointer;
+}
+
+.close:hover {
+  transform: translateX(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0;
+}
+
+span {
+  font-size: 7rem;
+  position: relative;
+  bottom: 54px;
+}
+
+.modal-content {
+  width: 85%;
+  max-width: 800px;
+  display: block;
+  margin: auto;
+}
+
+@media screen and (max-width: 375px) {
+  #gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px;
+    margin: 0;
+  }
+
+  .line {
+    margin: 40px 0 20px 0;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 70px;
+    gap: 18px;
+  }
+
+  #back-btn {
+    position: relative;
+    left: -1px;
+    font-size: 0.9rem;
+    width: 90px;
+  }
+
+  #title {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 30px;
+    position: relative;
+    align-items: center;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 5rem;
+    letter-spacing: -5px;
+  }
+
+  #title p {
+    font-size: 1rem;
+  }
+
+  .image-style {
+    width: 90vw;
+    height: 90%;
+  }
+
+  footer {
+    height: 10px;
+    padding: 0;
+  }
+
+  #top-btn {
+    width: 46px;
+    height: 34px;
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 2px 0 0 0;
+    margin: 0;
+
+    position: absolute;
+    top: 3390px;
+    left: 162px;
+  }
+
+  .close {
+    position: absolute;
+    left: 46%;
+    top: 3%;
+    height: 32px;
+    width: 32px;
+  }
+
+  span {
+    font-size: 5rem;
+    position: relative;
+    bottom: 44px;
+    right: 2px;
+  }
+}
